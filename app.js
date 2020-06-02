@@ -11,50 +11,64 @@ Can Colleen sing? no
 Does Colleen like to climb mountains? yes
 Does Colleen like to code? yes
 */
-
-var wasabiQuestion = prompt('Does Colleen like wasabi?');
-var irishQuestion = prompt('Is Colleen Irish?')
-var singQuestion = prompt('Can Colleen sing?')
-var climbQuestion = prompt('Does Colleen like to climb mountains?')
-var codeQuestion = prompt('Does Colleen like to code?')
+var userName = prompt('What is your name?');
+alert("Hello, " + userName + "!")
 
 
-if (wasabiQuestion) {
+var wasabiQuestion = prompt('Does Colleen like wasabi?').toLowerCase();
+
+
+if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
   // console.log('You are wrong!')
   alert('You are wrong!')
-} else {
+} else if (wasabiQuestion === 'no' || wasabiQuestion === 'n') {
   // console.log('You are correct!') 
   alert('You are correct!')
-}
+} else {
+  alert('Choose yes or no')
 
-if (irishQuestion) {
+}
+var irishQuestion = prompt('Is Colleen Irish?').toLowerCase();
+
+if (irishQuestion === 'yes' || irishQuestion === 'y') {
   // console.log('Sure and Begorrah!')
   alert('Sure and Begorrah!')
+} else if (irishQuestion === 'no' || irishQuestion === 'n') {
+  // console.log('O\'wrong!') 
+  alert('O\'wrong!')
 } else {
-  // console.log('O\'wrong')
-  alert('O\'wrong')
+  alert('Choose yes or no')
 }
 
-if (singQuestion) {
+var singQuestion = prompt('Can Colleen sing?').toLowerCase();
+if (singQuestion === 'yes' || singQuestion === 'y') {
   // console.log('You are off-tune')
-  alert('You are off-tune')
-} else {
-  // console.log('You are on-key!')
+  alert('You are off-tune!')
+} else if (singQuestion === 'no' || singQuestion === 'n') {
+  // console.log('You on-key!') 
   alert('You are on-key!')
+} else {
+  alert('Choose yes or no')
 }
-
-if (climbQuestion) {
+var climbQuestion = prompt('Does Colleen like to climb mountain?').toLowerCase();
+if (climbQuestion === 'yes' || climbQuestion === 'y') {
   // console.log('You are on the right trail!')
   prompt('You are on the right trail!')
+} else if (climbQuestion === 'no' || climbQuestion === 'n') {
+  // console.log('Wrong way') 
+  alert('Wrong way')
 } else {
- //  console.log('Wrong way!')
- prompt('Wrong way!')
+  alert('Choose yes or no')
 }
-
-if (codeQuestion) {
+var codeQuestion = prompt('Does Colleen like to code?').toLowerCase();
+if (codeQuestion === 'yes' || codeQuestion === 'y') {
   //console.log('TRUE')
   prompt('TRUE')
+} else if (codeQuestion === 'no' || codeQuestion === 'n') {
+  // console.log('FALSE!') 
+  alert('FALSE!')
 } else {
-  //console.log('FALSE!')
-  prompt('FALSE!')
+  alert('Choose yes or no')
 }
+
+alert("Goodbye, " + userName + "!")
