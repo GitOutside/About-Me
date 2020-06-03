@@ -82,9 +82,18 @@ else
 
 var howManySibs = prompt('How many siblings does Colleen have?');
 
+var i;
+for ( i = 4; i > 0; i-- ) {
+  console.log(i);
+}
+
+
+//loop 4 times
 if (howManySibs === '4'){
-  console.log('Ding, Ding, Ding - Correct!');
+  //console.log('Ding, Ding, Ding - Correct!');//
+  alert('Ding, Ding, Ding - Correct!');
 } else {
   console.log('Nope. Give it another shot.');
   howManySibs = prompt('Nope. Give it another shot.');
 }
+
