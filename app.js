@@ -1,5 +1,4 @@
 'use strict';
-
 console.log ('I\'m alive');
 
 /*
@@ -11,6 +10,8 @@ Can Colleen sing? no
 Does Colleen like to climb mountains? yes
 Does Colleen like to code? yes
 */
+
+
 var userName = prompt('What is your name?');
 alert('Hello, ' + userName + '!');
 
@@ -80,20 +81,18 @@ else
   too high or too low
 */
 
-var howManySibs = prompt('How many siblings does Colleen have?');
 
-var i;
-for ( i = 4; i > 0; i-- ) {
+
+for (var i = 0; i <4; i++) {
   console.log(i);
-}
-
-
-//loop 4 times
-if (howManySibs === '4'){
+  //loop 4 times
+  var howManySibs = prompt('How many siblings does Colleen have?');
+  if (howManySibs === '4'){
   //console.log('Ding, Ding, Ding - Correct!');//
-  alert('Ding, Ding, Ding - Correct!');
-} else {
-  console.log('Nope. Give it another shot.');
-  howManySibs = prompt('Nope. Give it another shot.');
+    alert('Ding, Ding, Ding - Correct!');
+  } else {
+    //console.log('Nope. Give it another shot.');
+    alert('Nope. Give it another shot.');
+    //console.log(i);//
+  }
 }
-
