@@ -11,13 +11,10 @@ Does Colleen like to climb mountains? yes
 Does Colleen like to code? yes
 */
 
-
+//==================Quesitions 1-6============================//
 var userName = prompt('What is your name?');
 alert('Hello, ' + userName + '. Welcome!');
-
-
 var wasabiQuestion = prompt('Does Colleen like wasabi?').toLowerCase();
-
 if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
   // console.log('You are wrong!')
   alert('You are wrong!');
@@ -26,10 +23,8 @@ if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
   alert('You are correct!');
 } else {
   alert('Choose yes or no');
-
 }
 var irishQuestion = prompt('Is Colleen Irish?').toLowerCase();
-
 if (irishQuestion === 'yes' || irishQuestion === 'y') {
   // console.log('Sure and Begorrah!')
   alert('Sure and Begorrah!');
@@ -72,7 +67,7 @@ if (codeQuestion === 'yes' || codeQuestion === 'y') {
 }
 
 
-//==========Question 6==========//
+//==========Question 6============================================//
 
 //loop 4 times
 for (var i = 0; i < 4; i++) {
@@ -89,25 +84,28 @@ for (var i = 0; i < 4; i++) {
     console.log('Too high. Guess again.');
     alert('Too high. Guess again.');
   }
-
   alert('Whoops! ' + userName + ', you have no more guesses. The answer is 4 siblings. 3 sisters and a brother.');
 
 
 
-///seventh question with array. multiple choice
+//      ==============Question=====================================//
 //What are some Washington mountains that Colleen has climbed?
+//repeat this question
 
-  var mountainArray = ['Mt Baker', 'Glacier Peak', 'Fortress Mountain', 'Mt Shuksan'];
-  for (i = 0; i < 7; i++); {
-    if(mountainArray === 'Mt Baker' || mountainArray === 'Glacier Peak' || mountainArray === 'Fortress Mountain' || mountainArray === 'Mt Shuksan'){
-      console.log('yes');
-    } else
-      console.log('nope');
+//for each guess evaluate howManyMountains and give alert.
+//Repeat 7 times
+
+var howManyMountains = prompt('What are some Washington mountains that Colleen has climbed?').toLowerCase;
+var mountains = ['Mt Baker', 'Glacier Peak', 'Fortress Mountain', 'Mt Shuksan'];
+var score = 0;
+var correctAns = false;
+
+for (var i = 0; i < 7; i++); {
+  if(howManyMountains === mountains[0] || howManyMountains === mountains [1]|| howManyMountains === [2] || mountains === [3])
+    console.log('yes');
+  } else {
+    console.log('nope');
   }
 
-  if(mountainArray === 'Mt Baker' || mountainArray === 'Glacier Peak' || mountainArray === 'Fortress Mountain' || mountainArray === 'Mt Shuksan'){
-    console.log('yes');
-  } else
-    console.log('nope');
-}
-alert('Goodbye, ' + userName + '. Thanks for getting to know me!')
+alert('You guessed' + score + ' out of 4!');       
+alert('Goodbye, ' + userName + '. Thanks for getting to know me!');
