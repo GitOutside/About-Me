@@ -13,11 +13,10 @@ Does Colleen like to code? yes
 
 
 var userName = prompt('What is your name?');
-alert('Hello, ' + userName + '!');
+alert('Hello, ' + userName + '. Welcome!');
 
 
 var wasabiQuestion = prompt('Does Colleen like wasabi?').toLowerCase();
-
 
 if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
   // console.log('You are wrong!')
@@ -71,28 +70,44 @@ if (codeQuestion === 'yes' || codeQuestion === 'y') {
 } else {
   alert('Choose yes or no');
 }
-alert('Goodbye, ' + userName + '!');
-
-/* How many siblings does Colleen have - 4
-if they are exactly right
-  right on!
-else
-  prompt to try again
-  too high or too low
-*/
 
 
+//==========Question 6==========//
 
-for (var i = 0; i <4; i++) {
-  console.log(i);
-  //loop 4 times
+//loop 4 times
+for (var i = 0; i < 4; i++) {
   var howManySibs = prompt('How many siblings does Colleen have?');
-  if (howManySibs === '4'){
-  //console.log('Ding, Ding, Ding - Correct!');//
+  parseInt(howManySibs);
+  if (howManySibs === 4){
+    console.log('Ding, Ding, Ding - Correct!');//
     alert('Ding, Ding, Ding - Correct!');
-  } else {
-    //console.log('Nope. Give it another shot.');
-    alert('Nope. Give it another shot.');
-    //console.log(i);//
+    i = 4; //exits loop after correct answer
+  } else if (howManySibs <= 3) {
+    console.log('Too low. Give it another shot.');
+    alert('Too low. Give it another shot.');
+  } else if (howManySibs > 4) {
+    console.log('Too high. Guess again.');
+    alert('Too high. Guess again.');
   }
+
+  alert('Whoops! ' + userName + ', you have no more guesses. The answer is 4 siblings. 3 sisters and a brother.');
+
+
+
+///seventh question with array. multiple choice
+//What are some Washington mountains that Colleen has climbed?
+
+  var mountainArray = ['Mt Baker', 'Glacier Peak', 'Fortress Mountain', 'Mt Shuksan'];
+  for (i = 0; i < 7; i++); {
+    if(mountainArray === 'Mt Baker' || mountainArray === 'Glacier Peak' || mountainArray === 'Fortress Mountain' || mountainArray === 'Mt Shuksan'){
+      console.log('yes');
+    } else
+      console.log('nope');
+  }
+
+  if(mountainArray === 'Mt Baker' || mountainArray === 'Glacier Peak' || mountainArray === 'Fortress Mountain' || mountainArray === 'Mt Shuksan'){
+    console.log('yes');
+  } else
+    console.log('nope');
 }
+alert('Goodbye, ' + userName + '. Thanks for getting to know me!')
