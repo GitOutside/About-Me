@@ -19,6 +19,7 @@ alert('Hello, ' + userName + '. Welcome!');
 Greeting();
 
 function FiveQuestions(){
+
 var wasabiQuestion = prompt('Does Colleen like wasabi?').toLowerCase();
 
 if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
@@ -30,7 +31,6 @@ if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
   alert('You are correct!');
 } else {
   alert('Choose yes or no');
-
 }
 
 var irishQuestion = prompt('Is Colleen Irish?').toLowerCase();
