@@ -111,7 +111,7 @@ Siblings();
 
 ///seventh question with array. multiple choice
 //What are some Washington mountains that Colleen has climbed?
-
+function BigHills(){
   var mountainArray = ['mt baker', 'glacier peak', 'fortress mountain', 'mt shuksan'];
   
   for (var i = 0; i < 7; i++){
@@ -125,5 +125,7 @@ Siblings();
       alert('Wrong!')
     }
   }
+}
+BigHills();
 alert('You answered ' + score + ' out of 7 correct!')
 alert('Goodbye, ' + userName + '. Thanks for getting to know me!')
