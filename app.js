@@ -1,7 +1,7 @@
 'use strict';
 console.log ('I\'m alive');
 var userName = "";
-
+var score = 0;
 /*
 About Colleen
 
@@ -26,15 +26,18 @@ if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
   alert('You are wrong!');
 } else if (wasabiQuestion === 'no' || wasabiQuestion === 'n') {
   // console.log('You are correct!');
+  score++;
   alert('You are correct!');
 } else {
   alert('Choose yes or no');
 
 }
+
 var irishQuestion = prompt('Is Colleen Irish?').toLowerCase();
 
 if (irishQuestion === 'yes' || irishQuestion === 'y') {
   // console.log('Sure and Begorrah!')
+  score++;
   alert('Sure and Begorrah!');
 } else if (irishQuestion === 'no' || irishQuestion === 'n') {
   // console.log('O\'wrong!');
@@ -49,6 +52,7 @@ if (singQuestion === 'yes' || singQuestion === 'y') {
   alert('You are off-tune!');
 } else if (singQuestion === 'no' || singQuestion === 'n') {
   // console.log('You are on-key!')//
+  score++;
   alert('You are on-key!');
 } else {
   alert('Choose yes or no');
@@ -56,6 +60,7 @@ if (singQuestion === 'yes' || singQuestion === 'y') {
 var climbQuestion = prompt('Does Colleen like to climb mountain?').toLowerCase();
 if (climbQuestion === 'yes' || climbQuestion === 'y') {
   // console.log('You are on the right trail!')
+  score++;
   alert('You are on the right trail!');
 } else if (climbQuestion === 'no' || climbQuestion === 'n') {
   // console.log('Wrong way')//
@@ -66,6 +71,7 @@ if (climbQuestion === 'yes' || climbQuestion === 'y') {
 var codeQuestion = prompt('Does Colleen like to code?').toLowerCase();
 if (codeQuestion === 'yes' || codeQuestion === 'y') {
   //console.log('TRUE')
+  score++;
   alert('TRUE');
 } else if (codeQuestion === 'no' || codeQuestion === 'n') {
   // console.log('FALSE!')//
@@ -85,6 +91,7 @@ for (var i = 0; i < 4; i++) {
   howManySibs = parseInt(howManySibs);
   if (howManySibs === 4){
     console.log('Ding, Ding, Ding - Correct!');//
+    score++;
     alert('Ding, Ding, Ding - Correct!');
     break;
   } else if (howManySibs <= 3) {
@@ -111,11 +118,12 @@ Siblings();
     var mountains = prompt('What are some of the mountains that Colleen has climbed?').toLowerCase();
     if(mountains === mountainArray[0] || mountains === mountainArray[1] || mountains === mountainArray[2] || mountains === mountainArray[3]){
       console.log('yes');
+      score++;
       alert('Correct!')
     } else{
       console.log('nope');
       alert('Wrong!')
     }
   }
-
+alert('You answered ' + score + ' out of 7 correct!')
 alert('Goodbye, ' + userName + '. Thanks for getting to know me!')
