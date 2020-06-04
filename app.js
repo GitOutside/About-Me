@@ -1,6 +1,6 @@
 'use strict';
 console.log ('I\'m alive');
-
+var userName = "";
 /*
 About Colleen
 
@@ -11,9 +11,11 @@ Does Colleen like to climb mountains? yes
 Does Colleen like to code? yes
 */
 
-
-var userName = prompt('What is your name?');
+function Greeting(){
+userName = prompt('What is your name?');
 alert('Hello, ' + userName + '. Welcome!');
+}
+Greeting();
 
 function FiveQuestions(){
 var wasabiQuestion = prompt('Does Colleen like wasabi?').toLowerCase();
