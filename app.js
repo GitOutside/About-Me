@@ -1,6 +1,7 @@
 'use strict';
 console.log ('I\'m alive');
 var userName = "";
+
 /*
 About Colleen
 
@@ -103,19 +104,18 @@ Siblings();
 
 ///seventh question with array. multiple choice
 //What are some Washington mountains that Colleen has climbed?
-/*
-  var mountainArray = ['Mt Baker', 'Glacier Peak', 'Fortress Mountain', 'Mt Shuksan'];
-  for (i = 0; i < 7; i++); {
-    if(mountainArray === 'Mt Baker' || mountainArray === 'Glacier Peak' || mountainArray === 'Fortress Mountain' || mountainArray === 'Mt Shuksan'){
+
+  var mountainArray = ['mt baker', 'glacier peak', 'fortress mountain', 'mt shuksan'];
+  
+  for (var i = 0; i < 7; i++){
+    var mountains = prompt('What are some of the mountains that Colleen has climbed?').toLowerCase();
+    if(mountains === mountainArray[0] || mountains === mountainArray[1] || mountains === mountainArray[2] || mountains === mountainArray[3]){
       console.log('yes');
-    } else
+      alert('Correct!')
+    } else{
       console.log('nope');
+      alert('Wrong!')
+    }
   }
 
-  if(mountainArray === 'Mt Baker' || mountainArray === 'Glacier Peak' || mountainArray === 'Fortress Mountain' || mountainArray === 'Mt Shuksan'){
-    console.log('yes');
-  } else
-    console.log('nope');
-}
 alert('Goodbye, ' + userName + '. Thanks for getting to know me!')
-*/
