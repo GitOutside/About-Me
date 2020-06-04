@@ -15,7 +15,7 @@ Does Colleen like to code? yes
 var userName = prompt('What is your name?');
 alert('Hello, ' + userName + '. Welcome!');
 
-
+function FiveQuestions(){
 var wasabiQuestion = prompt('Does Colleen like wasabi?').toLowerCase();
 
 if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
@@ -53,7 +53,7 @@ if (singQuestion === 'yes' || singQuestion === 'y') {
 var climbQuestion = prompt('Does Colleen like to climb mountain?').toLowerCase();
 if (climbQuestion === 'yes' || climbQuestion === 'y') {
   // console.log('You are on the right trail!')
-  prompt('You are on the right trail!');
+  alert('You are on the right trail!');
 } else if (climbQuestion === 'no' || climbQuestion === 'n') {
   // console.log('Wrong way')//
   alert('Wrong way');
@@ -63,17 +63,18 @@ if (climbQuestion === 'yes' || climbQuestion === 'y') {
 var codeQuestion = prompt('Does Colleen like to code?').toLowerCase();
 if (codeQuestion === 'yes' || codeQuestion === 'y') {
   //console.log('TRUE')
-  prompt('TRUE');
+  alert('TRUE');
 } else if (codeQuestion === 'no' || codeQuestion === 'n') {
   // console.log('FALSE!')//
   alert('FALSE!');
 } else {
   alert('Choose yes or no');
 }
-
+}
+FiveQuestions();
 
 //==========Question 6==========//
-
+/*
 //loop 4 times
 for (var i = 0; i < 4; i++) {
   var howManySibs = prompt('How many siblings does Colleen have?');
@@ -111,3 +112,4 @@ for (var i = 0; i < 4; i++) {
     console.log('nope');
 }
 alert('Goodbye, ' + userName + '. Thanks for getting to know me!')
+*/
