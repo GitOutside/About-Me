@@ -1,6 +1,7 @@
 'use strict';
 console.log ('I\'m alive');
-
+var userName = "";
+var score = 0;
 /*
 About Colleen
 
@@ -11,22 +12,30 @@ Does Colleen like to climb mountains? yes
 Does Colleen like to code? yes
 */
 
-//==================Quesitions 1-6============================//
-var userName = prompt('What is your name?');
+function Greeting(){
+userName = prompt('What is your name?');
 alert('Hello, ' + userName + '. Welcome!');
+}
+Greeting();
+
+function FiveQuestions(){
+
 var wasabiQuestion = prompt('Does Colleen like wasabi?').toLowerCase();
 if (wasabiQuestion === 'yes' || wasabiQuestion === 'y') {
   // console.log('You are wrong!')
   alert('You are wrong!');
 } else if (wasabiQuestion === 'no' || wasabiQuestion === 'n') {
   // console.log('You are correct!');
+  score++;
   alert('You are correct!');
 } else {
   alert('Choose yes or no');
 }
+
 var irishQuestion = prompt('Is Colleen Irish?').toLowerCase();
 if (irishQuestion === 'yes' || irishQuestion === 'y') {
   // console.log('Sure and Begorrah!')
+  score++;
   alert('Sure and Begorrah!');
 } else if (irishQuestion === 'no' || irishQuestion === 'n') {
   // console.log('O\'wrong!');
@@ -41,6 +50,7 @@ if (singQuestion === 'yes' || singQuestion === 'y') {
   alert('You are off-tune!');
 } else if (singQuestion === 'no' || singQuestion === 'n') {
   // console.log('You are on-key!')//
+  score++;
   alert('You are on-key!');
 } else {
   alert('Choose yes or no');
@@ -48,7 +58,8 @@ if (singQuestion === 'yes' || singQuestion === 'y') {
 var climbQuestion = prompt('Does Colleen like to climb mountain?').toLowerCase();
 if (climbQuestion === 'yes' || climbQuestion === 'y') {
   // console.log('You are on the right trail!')
-  prompt('You are on the right trail!');
+  score++;
+  alert('You are on the right trail!');
 } else if (climbQuestion === 'no' || climbQuestion === 'n') {
   // console.log('Wrong way')//
   alert('Wrong way');
@@ -58,25 +69,29 @@ if (climbQuestion === 'yes' || climbQuestion === 'y') {
 var codeQuestion = prompt('Does Colleen like to code?').toLowerCase();
 if (codeQuestion === 'yes' || codeQuestion === 'y') {
   //console.log('TRUE')
-  prompt('TRUE');
+  score++;
+  alert('TRUE');
 } else if (codeQuestion === 'no' || codeQuestion === 'n') {
   // console.log('FALSE!')//
   alert('FALSE!');
 } else {
   alert('Choose yes or no');
 }
-
+}
+FiveQuestions();
 
 //==========Question 6============================================//
 
 //loop 4 times
+function Siblings(){
 for (var i = 0; i < 4; i++) {
   var howManySibs = prompt('How many siblings does Colleen have?');
-  parseInt(howManySibs);
+  howManySibs = parseInt(howManySibs);
   if (howManySibs === 4){
     console.log('Ding, Ding, Ding - Correct!');//
+    score++;
     alert('Ding, Ding, Ding - Correct!');
-    i = 4; //exits loop after correct answer
+    break;
   } else if (howManySibs <= 3) {
     console.log('Too low. Give it another shot.');
     alert('Too low. Give it another shot.');
@@ -84,28 +99,31 @@ for (var i = 0; i < 4; i++) {
     console.log('Too high. Guess again.');
     alert('Too high. Guess again.');
   }
-  alert('Whoops! ' + userName + ', you have no more guesses. The answer is 4 siblings. 3 sisters and a brother.');
-
+}
+  if(i === 4){
+    alert('Whoops! ' + userName + ', you have no more guesses. The answer is 4 siblings. 3 sisters and a brother.');
+  }
+}
+Siblings();
 
 
 //      ==============Question=====================================//
 //What are some Washington mountains that Colleen has climbed?
-//repeat this question
-
-//for each guess evaluate howManyMountains and give alert.
-//Repeat 7 times
-
-var howManyMountains = prompt('What are some Washington mountains that Colleen has climbed?').toLowerCase;
-var mountains = ['Mt Baker', 'Glacier Peak', 'Fortress Mountain', 'Mt Shuksan'];
-var score = 0;
-var correctAns = false;
-
-for (var i = 0; i < 7; i++); {
-  if(howManyMountains === mountains[0] || howManyMountains === mountains [1]|| howManyMountains === [2] || mountains === [3])
-    console.log('yes');
-  } else {
-    console.log('nope');
+function BigHills(){
+  var mountainArray = ['mt baker', 'glacier peak', 'fortress mountain', 'mt shuksan'];
+  
+  for (var i = 0; i < 7; i++){
+    var mountains = prompt('What are some of the mountains that Colleen has climbed?').toLowerCase();
+    if(mountains === mountainArray[0] || mountains === mountainArray[1] || mountains === mountainArray[2] || mountains === mountainArray[3]){
+      console.log('yes');
+      score++;
+      alert('Correct!')
+    } else{
+      console.log('nope');
+      alert('Wrong!')
+    }
   }
-
-alert('You guessed' + score + ' out of 4!');       
-alert('Goodbye, ' + userName + '. Thanks for getting to know me!');
+}
+BigHills();
+alert('You answered ' + score + ' out of 7 correct!')
+alert('Goodbye, ' + userName + '. Thanks for getting to know me!')
