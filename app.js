@@ -76,15 +76,16 @@ if (codeQuestion === 'yes' || codeQuestion === 'y') {
 FiveQuestions();
 
 //==========Question 6==========//
-/*
+
 //loop 4 times
+function Siblings(){
 for (var i = 0; i < 4; i++) {
   var howManySibs = prompt('How many siblings does Colleen have?');
-  parseInt(howManySibs);
+  howManySibs = parseInt(howManySibs);
   if (howManySibs === 4){
     console.log('Ding, Ding, Ding - Correct!');//
     alert('Ding, Ding, Ding - Correct!');
-    i = 4; //exits loop after correct answer
+    break;
   } else if (howManySibs <= 3) {
     console.log('Too low. Give it another shot.');
     alert('Too low. Give it another shot.');
@@ -92,14 +93,17 @@ for (var i = 0; i < 4; i++) {
     console.log('Too high. Guess again.');
     alert('Too high. Guess again.');
   }
-
-  alert('Whoops! ' + userName + ', you have no more guesses. The answer is 4 siblings. 3 sisters and a brother.');
-
+}
+  if(i === 4){
+    alert('Whoops! ' + userName + ', you have no more guesses. The answer is 4 siblings. 3 sisters and a brother.');
+  }
+}
+Siblings();
 
 
 ///seventh question with array. multiple choice
 //What are some Washington mountains that Colleen has climbed?
-
+/*
   var mountainArray = ['Mt Baker', 'Glacier Peak', 'Fortress Mountain', 'Mt Shuksan'];
   for (i = 0; i < 7; i++); {
     if(mountainArray === 'Mt Baker' || mountainArray === 'Glacier Peak' || mountainArray === 'Fortress Mountain' || mountainArray === 'Mt Shuksan'){
