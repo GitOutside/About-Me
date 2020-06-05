@@ -114,5 +114,5 @@ function bigHills(){
   }
 }
 bigHills();
-alert('You answered ' + score + ' out of 7 correct!');
+alert('You answered ' + score + ' correctly!');
 alert('Goodbye, ' + userName + '. Thanks for getting to know me!');
