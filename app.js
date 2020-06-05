@@ -1,16 +1,7 @@
 'use strict';
-console.log ('I\'m alive');
+//console.log ('I\'m alive');
 var userName = '';
 var score = 0;
-/*
-About Colleen
-
-Does Colleen like wasabi? no
-Is Colleen Irish? yes
-Can Colleen sing? no
-Does Colleen like to climb mountains? yes
-Does Colleen like to code? yes
-*/
 
 function greeting(){
   userName = prompt('What is your name?');
@@ -61,7 +52,7 @@ function fiveQuestions(){
     score++;
     alert('You are on the right trail!');
   } else if (climbQuestion === 'no' || climbQuestion === 'n') {
-  // console.log('Wrong way')//
+  // console.log('Wrong way')
     alert('Wrong way');
   } else {
     alert('Choose yes or no');
@@ -72,7 +63,7 @@ function fiveQuestions(){
     score++;
     alert('TRUE');
   } else if (codeQuestion === 'no' || codeQuestion === 'n') {
-  // console.log('FALSE!')//
+  // console.log('FALSE!')
     alert('FALSE!');
   } else {
     alert('Choose yes or no');
@@ -80,15 +71,14 @@ function fiveQuestions(){
 }
 fiveQuestions();
 
-//==========Question 6============================================//
+//==========Question6============================================//
 
-//loop 4 times
 function siblings(){
   for (var i = 0; i < 4; i++) {
     var howManySibs = prompt('How many siblings does Colleen have?');
     howManySibs = parseInt(howManySibs);
     if (howManySibs === 4){
-      console.log('Ding, Ding, Ding - Correct!');//
+      console.log('Ding, Ding, Ding - Correct!');
       score++;
       alert('Ding, Ding, Ding - Correct!');
       break;
@@ -107,8 +97,7 @@ function siblings(){
 siblings();
 
 
-//      ==============Question=====================================//
-//What are some Washington mountains that Colleen has climbed?
+//      ==============Question7=====================================//
 function bigHills(){
   var mountainArray = ['mt baker', 'glacier peak', 'fortress mountain', 'mt shuksan'];
 
