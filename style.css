@@ -1,10 +1,12 @@
 body {
   font-family: sans-serif;
+  background-color: #c1e8e8;
 }
 
 h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #5F9EA0;
+  color: #eb5f50;
   text-align: center;
+  border: 2px solid #eb5f50;
 }
 

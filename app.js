@@ -114,5 +114,5 @@ function bigHills(){
   }
 }
 bigHills();
-alert('You answered ' + score + ' correctly!');
+alert('You answered ' + score + ' correctly! In case you are wondering, some of the mountains are Mt Baker, Glacier Peak, Fortress Mountain, and Mt Shuksan.');
 alert('Goodbye, ' + userName + '. Thanks for getting to know me!');
